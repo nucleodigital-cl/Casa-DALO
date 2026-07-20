@@ -11,6 +11,16 @@ Artefactos literarios hechos a mano en Chile.
 2. Haz doble clic en **`index.html`**.
 3. Se abre en tu navegador.
 
+## Imágenes
+
+Las fotos y logos van en:
+
+`assets/images/`
+
+Ahí ya está el logo oficial: `logo-oficial.png`
+
+Para agregar más fotos: arrástralas a esa carpeta y avísame para conectarlas en la web.
+
 ---
 
 ## Contacto (ya configurado)
