@@ -3,274 +3,377 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Casa DALO — Del Amor y Otras Lecturas. Imprenta boutique de libros artesanales hechos a mano en Chile." />
+  <title>Casa DALO — Del Amor y Otras Lecturas</title>
+  <meta name="description" content="Casa DALO: artefactos literarios hechos a mano en Chile. Ediciones artesanales de colección, encuadernadas a mano." />
   <meta name="author" content="Casa DALO" />
   <meta property="og:title" content="Casa DALO — Del Amor y Otras Lecturas" />
   <meta property="og:description" content="Artefactos literarios hechos a mano en Chile." />
   <meta property="og:type" content="website" />
-  <title>Casa DALO — Del Amor y Otras Lecturas</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Lora:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="css/styles.css" />
 </head>
 <body>
+  <div class="topbar">Artefactos literarios hechos a mano en Chile</div>
+
   <header class="site-header">
-    <div class="topbar">Artefactos literarios hechos a mano en Chile</div>
-    <div class="container navbar">
-      <a class="logo-wrap" href="#inicio" aria-label="Casa DALO — inicio">
-        <img class="logo-mark" src="assets/icons/logo.svg" alt="" width="68" height="56" />
+    <div class="container header-inner">
+      <a class="logo" href="#inicio" aria-label="Casa DALO — inicio">
+        <img class="logo-mark" src="assets/icons/logo.svg" alt="" width="40" height="40" />
         <span class="logo-text">
           <strong>Casa DALO</strong>
           <span>Del Amor y Otras Lecturas</span>
         </span>
       </a>
 
-      <button class="nav-toggle" type="button" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Abrir menú">
+      <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="main-nav" aria-label="Abrir menú">
         <span></span><span></span><span></span>
       </button>
 
-      <nav class="nav-links" id="navLinks" aria-label="Principal">
+      <nav class="nav" id="main-nav" aria-label="Principal">
         <a href="#inicio">Inicio</a>
         <a href="#colecciones">Colecciones</a>
         <a href="#disena">Diseña tu libro</a>
-        <a href="#proceso">Proceso</a>
-        <a href="#galeria">Galería</a>
-        <a href="#contacto">Contacto</a>
+        <a href="#autores">Para autores</a>
+        <a href="#proceso">Sobre nosotros</a>
+        <a href="#cotizacion">Contacto</a>
       </nav>
+
+      <div class="header-actions">
+        <button class="icon-btn" type="button" aria-label="Cuenta (próximamente)" title="Próximamente">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <circle cx="12" cy="8" r="3.5" />
+            <path d="M5 20c1.5-3.5 4-5 7-5s5.5 1.5 7 5" stroke-linecap="round" />
+          </svg>
+        </button>
+        <button class="icon-btn" type="button" aria-label="Carrito (próximamente)" title="Próximamente">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+            <path d="M4 6h2l2.2 10h9.6L20 8H8" stroke-linecap="round" stroke-linejoin="round" />
+            <circle cx="10" cy="20" r="1.2" fill="currentColor" stroke="none" />
+            <circle cx="17" cy="20" r="1.2" fill="currentColor" stroke="none" />
+          </svg>
+          <span class="cart-count">0</span>
+        </button>
+      </div>
     </div>
   </header>
 
   <main>
     <section class="hero" id="inicio">
-      <div class="container hero-content">
-        <p class="eyebrow">Imprenta boutique · Chile</p>
-        <h1>Casa DALO</h1>
-        <p>Del Amor y Otras Lecturas. Ediciones artesanales de colección, encuadernadas a mano para historias que perduran.</p>
-        <div class="hero-actions">
-          <a class="btn btn-primary" href="#colecciones">Ver colecciones</a>
-          <a class="btn btn-secondary" href="#disena">Diseña el tuyo</a>
+      <div class="hero-bg" aria-hidden="true"></div>
+      <div class="hero-book" aria-hidden="true">
+        <div class="hero-book-cover">
+          <div class="foil">Casa<br />DALO</div>
         </div>
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-brand">Casa DALO</h1>
+        <p class="hero-meaning">Del Amor y Otras Lecturas</p>
+        <p class="hero-headline">Los libros también merecen ser inolvidables.</p>
+        <p class="hero-sub">Ediciones artesanales de colección, encuadernadas a mano en Chile para historias que perduran.</p>
+        <a class="btn btn-gold" href="#cotizacion">Diseña tu edición</a>
       </div>
     </section>
 
-    <section class="section section-light" id="servicios">
+    <section class="services" id="autores" aria-labelledby="servicios-title">
       <div class="container">
-        <div class="section-heading">
-          <h2>Lo que hacemos</h2>
-          <p>Cada ejemplar se cose, se prensa y se termina a mano. Piezas únicas para lectores y autores.</p>
-        </div>
-        <div class="info-grid">
-          <article class="info-card">
+        <h2 class="section-title reveal" id="servicios-title">Lo que hacemos</h2>
+        <div class="section-ornament reveal" aria-hidden="true"><span>✦</span></div>
+        <div class="services-grid">
+          <article class="service reveal">
+            <img class="service-icon" src="assets/icons/book.svg" alt="" width="56" height="56" />
             <h3>Ediciones especiales</h3>
-            <p>Piezas únicas de colección, numeradas y pensadas para durar.</p>
+            <p>Piezas únicas de colección</p>
           </article>
-          <article class="info-card">
+          <article class="service reveal">
+            <img class="service-icon" src="assets/icons/needle.svg" alt="" width="56" height="56" />
             <h3>Encuadernación artesanal</h3>
-            <p>Cosido, prensado y acabados a mano en nuestro taller.</p>
+            <p>Cada libro es cosido, prensado y terminado a mano</p>
           </article>
-          <article class="info-card">
+          <article class="service reveal">
+            <img class="service-icon" src="assets/icons/quill.svg" alt="" width="56" height="56" />
             <h3>Para autores</h3>
-            <p>Imprimimos y encuadernamos tu historia con acabado boutique.</p>
+            <p>Imprimimos y encuadernamos tu historia</p>
+          </article>
+          <article class="service reveal">
+            <img class="service-icon" src="assets/icons/gift.svg" alt="" width="56" height="56" />
+            <h3>Regalos personalizados</h3>
+            <p>Libros que se convierten en recuerdos</p>
+          </article>
+          <article class="service reveal">
+            <img class="service-icon" src="assets/icons/heart-pack.svg" alt="" width="56" height="56" />
+            <h3>Empacado con amor</h3>
+            <p>Cada detalle importa</p>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-dark" id="colecciones">
+    <section class="collections" id="colecciones" aria-labelledby="colecciones-title">
       <div class="container">
-        <div class="section-heading">
-          <h2>Colecciones</h2>
-          <p>Cada colección tiene su propio carácter, paleta y encuadernación.</p>
+        <h2 class="section-title reveal" id="colecciones-title">Colecciones</h2>
+        <div class="section-ornament reveal" aria-hidden="true"><span>✦</span></div>
+        <div class="collections-track" id="collections-track">
+          <a class="collection reveal" href="#cotizacion">
+            <div class="collection-visual collection-midnight">
+              <span class="collection-motif">Luna · estrellas · plata</span>
+            </div>
+            <h3>Midnight Collection</h3>
+            <span class="text-link">Ver colección →</span>
+          </a>
+          <a class="collection reveal" href="#cotizacion">
+            <div class="collection-visual collection-forest">
+              <span class="collection-motif">Botánica · cobre · bosque</span>
+            </div>
+            <h3>Forest Collection</h3>
+            <span class="text-link">Ver colección →</span>
+          </a>
+          <a class="collection reveal" href="#cotizacion">
+            <div class="collection-visual collection-crimson">
+              <span class="collection-motif">Carmesí · oro · dragón</span>
+            </div>
+            <h3>Crimson Collection</h3>
+            <span class="text-link">Ver colección →</span>
+          </a>
+          <a class="collection reveal" href="#cotizacion">
+            <div class="collection-visual collection-kingdom">
+              <span class="collection-motif">Real · filigrana · reino</span>
+            </div>
+            <h3>Kingdom Collection</h3>
+            <span class="text-link">Ver colección →</span>
+          </a>
         </div>
-        <div class="collections-grid">
-          <article class="collection-card midnight">
-            <div class="collection-card-content">
-              <h3>Midnight</h3>
-              <p>Azul noche, estrellas y foil plata. Para leer cuando el mundo duerme.</p>
-              <a href="#contacto">Explorar →</a>
-            </div>
-          </article>
-          <article class="collection-card forest">
-            <div class="collection-card-content">
-              <h3>Forest</h3>
-              <p>Verde bosque, botánica y cobre. La naturaleza hecha libro.</p>
-              <a href="#contacto">Explorar →</a>
-            </div>
-          </article>
-          <article class="collection-card crimson">
-            <div class="collection-card-content">
-              <h3>Crimson</h3>
-              <p>Burdeos profundo, oro y pasión en cada hoja.</p>
-              <a href="#contacto">Explorar →</a>
-            </div>
-          </article>
-          <article class="collection-card kingdom">
-            <div class="collection-card-content">
-              <h3>Kingdom</h3>
-              <p>Azul real y filigrana dorada. Para historias que merecen un trono.</p>
-              <a href="#contacto">Explorar →</a>
-            </div>
-          </article>
+        <div class="collections-nav" aria-label="Deslizar colecciones">
+          <button type="button" data-collections-prev aria-label="Anterior">‹</button>
+          <button type="button" data-collections-next aria-label="Siguiente">›</button>
         </div>
       </div>
     </section>
 
-    <section class="section section-light" id="disena">
+    <section class="design" id="disena" aria-labelledby="disena-title">
       <div class="container">
-        <div class="section-heading">
-          <h2>Diseña tu libro</h2>
-          <p>Elige detalles y déjanos una idea. Te respondemos con opciones y presupuesto.</p>
-        </div>
-        <div class="configurator-grid">
-          <form class="configurator-form" id="config-form">
-            <label>
-              <span>Tipo de tapa</span>
-              <select name="tapa" id="tapa">
-                <option value="Tapa dura">Tapa dura</option>
-                <option value="Tapa blanda">Tapa blanda</option>
-                <option value="Cuero">Cuero</option>
-              </select>
-            </label>
-            <label>
-              <span>Colección / color</span>
-              <select name="coleccion" id="coleccion">
-                <option value="Midnight">Midnight</option>
-                <option value="Forest">Forest</option>
-                <option value="Crimson">Crimson</option>
-                <option value="Kingdom">Kingdom</option>
-              </select>
-            </label>
-            <label>
-              <span>Tipo de papel</span>
-              <select name="papel" id="papel">
-                <option value="Crema">Crema</option>
-                <option value="Blanco nieve">Blanco nieve</option>
-                <option value="Algodón">Algodón</option>
-              </select>
-            </label>
-            <label>
-              <span>Acabado especial</span>
-              <select name="acabado" id="acabado">
-                <option value="Bordes dorados / foil">Bordes dorados / foil</option>
-                <option value="Gofrado">Gofrado</option>
-                <option value="Sin acabado especial">Sin acabado especial</option>
-              </select>
-            </label>
-            <label>
-              <span>Tu idea</span>
-              <textarea name="idea" id="idea" rows="4" placeholder="Título, cantidad, fecha deseada…"></textarea>
-            </label>
-            <a class="btn btn-primary" href="#contacto">Continuar al pedido</a>
-          </form>
-          <div class="configurator-preview">
-            <p class="eyebrow" style="color: var(--color-gold);">Vista previa</p>
-            <h3 style="font-family: var(--font-display); font-size: 2rem; color: var(--color-forest); margin-bottom: 0.75rem;">Tu edición Casa DALO</h3>
-            <p id="preview-text" style="color: var(--color-taupe);">
-              Tapa dura · Midnight · Papel crema · Bordes dorados / foil
-            </p>
+        <h2 class="section-title reveal" id="disena-title">Diseña tu libro</h2>
+        <div class="section-ornament reveal" aria-hidden="true"><span>✦</span></div>
+
+        <ol class="design-steps reveal">
+          <li class="design-step">
+            <div class="design-step-num">1</div>
+            <span>Formato</span>
+          </li>
+          <li class="design-step">
+            <div class="design-step-num">2</div>
+            <span>Cubierta</span>
+          </li>
+          <li class="design-step">
+            <div class="design-step-num">3</div>
+            <span>Foil</span>
+          </li>
+          <li class="design-step">
+            <div class="design-step-num">4</div>
+            <span>Cantos</span>
+          </li>
+          <li class="design-step">
+            <div class="design-step-num">5</div>
+            <span>Guardas</span>
+          </li>
+          <li class="design-step">
+            <div class="design-step-num">6</div>
+            <span>Caja</span>
+          </li>
+        </ol>
+
+        <div class="design-layout">
+          <div class="design-copy reveal">
+            <h3>Crea una edición única. A tu manera.</h3>
+            <p class="design-desc">Elige tapa, colección, papel y acabado. Luego déjanos tu idea y te respondemos con un presupuesto.</p>
+            <form class="mini-config reveal" id="mini-config">
+              <label>
+                <span>Tapa</span>
+                <select id="cfg-tapa" name="tapa">
+                  <option>Tapa dura</option>
+                  <option>Tapa blanda</option>
+                  <option>Cuero</option>
+                </select>
+              </label>
+              <label>
+                <span>Colección</span>
+                <select id="cfg-coleccion" name="coleccion">
+                  <option>Midnight</option>
+                  <option>Forest</option>
+                  <option>Crimson</option>
+                  <option>Kingdom</option>
+                </select>
+              </label>
+              <label>
+                <span>Papel</span>
+                <select id="cfg-papel" name="papel">
+                  <option>Crema</option>
+                  <option>Blanco nieve</option>
+                  <option>Algodón</option>
+                </select>
+              </label>
+              <label>
+                <span>Acabado</span>
+                <select id="cfg-acabado" name="acabado">
+                  <option>Bordes dorados / foil</option>
+                  <option>Gofrado</option>
+                  <option>Sin acabado especial</option>
+                </select>
+              </label>
+            </form>
+            <p class="preview-line" id="preview-line">Tapa dura · Midnight · Papel Crema · Bordes dorados / foil</p>
+            <a class="btn btn-forest" href="#cotizacion">Comenzar +</a>
+          </div>
+          <div class="design-preview reveal">
+            <div class="design-main">Casa DALO</div>
+            <div class="design-thumbs" aria-hidden="true">
+              <span></span><span></span><span></span><span></span><span></span>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-light" id="proceso" style="padding-top: 0;">
+    <section class="process" id="proceso" aria-labelledby="proceso-title">
       <div class="container">
-        <div class="section-heading">
-          <h2>Nuestro proceso</h2>
-          <p>Del taller a tus manos, con cuidado en cada paso.</p>
-        </div>
-        <div class="info-grid">
-          <article class="info-card"><h3>1. Impresión</h3><p>Páginas interiores con cuidado tipográfico.</p></article>
-          <article class="info-card"><h3>2. Cosido</h3><p>Cada pliego se cose a mano.</p></article>
-          <article class="info-card"><h3>3. Prensado</h3><p>Forma y firmeza para que el libro dure.</p></article>
-          <article class="info-card"><h3>4. Foil</h3><p>Detalles metálicos en tapa y lomo.</p></article>
-          <article class="info-card"><h3>5. Pintado</h3><p>Cantos y acabados de color.</p></article>
-          <article class="info-card"><h3>6. Empaque</h3><p>Envuelto con amor, listo para regalar.</p></article>
+        <h2 class="section-title reveal" id="proceso-title">Nuestro proceso</h2>
+        <div class="section-ornament reveal" aria-hidden="true"><span>✦</span></div>
+        <div class="process-grid">
+          <article class="process-item">
+            <div class="process-num">01</div>
+            <div class="process-illus" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="4" y="10" width="24" height="14"/><path d="M8 10V6h16v4M10 16h12M10 20h8"/></svg>
+            </div>
+            <h3>Impresión</h3>
+          </article>
+          <article class="process-item">
+            <div class="process-num">02</div>
+            <div class="process-illus" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 8c4-2 8-2 10 0v16c-2-2-6-2-10 0V8zM16 8c2-2 6-2 10 0v16c-4-2-8-2-10 0"/><path d="M16 12v8"/></svg>
+            </div>
+            <h3>Cosido</h3>
+          </article>
+          <article class="process-item">
+            <div class="process-num">03</div>
+            <div class="process-illus" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="8" y="14" width="16" height="10"/><path d="M6 14h20M12 8h8v6"/></svg>
+            </div>
+            <h3>Prensado</h3>
+          </article>
+          <article class="process-item">
+            <div class="process-num">04</div>
+            <div class="process-illus" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M8 22l8-14 8 14"/><circle cx="16" cy="20" r="3"/></svg>
+            </div>
+            <h3>Foil</h3>
+          </article>
+          <article class="process-item">
+            <div class="process-num">05</div>
+            <div class="process-illus" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M10 24c0-6 4-10 6-14 2 4 6 8 6 14"/><path d="M8 24h16"/><circle cx="12" cy="10" r="2"/></svg>
+            </div>
+            <h3>Pintado</h3>
+          </article>
+          <article class="process-item">
+            <div class="process-num">06</div>
+            <div class="process-illus" aria-hidden="true">
+              <svg viewBox="0 0 32 32" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="8" y="12" width="16" height="12"/><path d="M8 12c0-4 4-6 8-2 4-4 8-2 8 2"/><path d="M16 12v12"/></svg>
+            </div>
+            <h3>Empaque</h3>
+          </article>
         </div>
       </div>
     </section>
 
-    <section class="section section-dark" id="galeria">
+    <section class="quote" id="cotizacion" aria-labelledby="cotizacion-title">
       <div class="container">
-        <div class="section-heading">
-          <h2>Galería</h2>
-          <p>Atmósfera de taller, materiales y ediciones. Pronto con fotos reales de tus libros.</p>
-        </div>
-        <div class="gallery-grid">
-          <div class="gallery-item gallery-tall" style="background: linear-gradient(160deg, #1e2f28, #0d1814);"></div>
-          <div class="gallery-item gallery-regular" style="background: linear-gradient(160deg, #5b1e2d, #2a0e14);"></div>
-          <div class="gallery-item gallery-regular" style="background: linear-gradient(160deg, #1a2238, #0c1321);"></div>
-          <div class="gallery-item gallery-wide" style="background: linear-gradient(90deg, #b78c42 0%, #1e2f28 55%, #5b1e2d 100%); opacity: 0.85;"></div>
-        </div>
-      </div>
-    </section>
+        <h2 class="section-title reveal" id="cotizacion-title">Pide tu cotización</h2>
+        <div class="section-ornament reveal" aria-hidden="true"><span>✦</span></div>
+        <p class="quote-intro reveal">Cuéntanos qué edición sueñas. Te respondemos con opciones, tiempos y un presupuesto a tu medida.</p>
 
-    <section class="section section-light" id="contacto">
-      <div class="container">
-        <div class="section-heading">
-          <h2>Haz tu pedido</h2>
-          <p>Cuéntanos qué edición sueñas. Te respondemos por correo o WhatsApp.</p>
-        </div>
-        <form class="order-form" id="order-form" style="max-width: 640px; margin-inline: auto;" novalidate>
-          <label>
-            <span>Nombre</span>
-            <input type="text" name="nombre" id="nombre" required placeholder="Tu nombre" autocomplete="name" />
-          </label>
-          <label>
-            <span>Email o WhatsApp</span>
-            <input type="text" name="contacto" id="contacto-field" required placeholder="correo o +56…" autocomplete="email" />
-          </label>
-          <label>
-            <span>Tipo de proyecto</span>
-            <select name="tipo" id="tipo" required>
+        <form class="quote-form reveal" id="quote-form" novalidate>
+          <div class="form-row">
+            <div class="field">
+              <label for="nombre">Nombre</label>
+              <input id="nombre" name="nombre" type="text" autocomplete="name" required placeholder="Tu nombre" />
+            </div>
+            <div class="field">
+              <label for="contacto">Email o WhatsApp</label>
+              <input id="contacto" name="contacto" type="text" autocomplete="email" required placeholder="correo o +56…" />
+            </div>
+          </div>
+          <div class="field">
+            <label for="tipo">Tipo de proyecto</label>
+            <select id="tipo" name="tipo" required>
               <option value="">Elige una opción</option>
               <option value="Edición especial / colección">Edición especial / colección</option>
-              <option value="Libro personalizado">Libro personalizado</option>
-              <option value="Para autores">Para autores</option>
+              <option value="Libro personalizado (regalo)">Libro personalizado (regalo)</option>
+              <option value="Para autores (mi manuscrito)">Para autores (mi manuscrito)</option>
+              <option value="Kit de lectura">Kit de lectura</option>
               <option value="Otro">Otro</option>
             </select>
-          </label>
-          <label>
-            <span>Mensaje</span>
-            <textarea name="mensaje" id="mensaje" rows="5" required placeholder="Cuéntanos tu idea…"></textarea>
-          </label>
-          <div style="display: flex; flex-wrap: wrap; gap: 0.75rem;">
-            <button class="btn btn-primary" type="submit" data-send="email">Enviar por correo</button>
-            <button class="btn btn-secondary" type="button" data-send="whatsapp" style="color: var(--color-forest); border-color: var(--color-gold);">Enviar por WhatsApp</button>
           </div>
-          <p id="form-success" style="display: none; color: var(--color-forest); margin-top: 0.5rem;" role="status">
-            ¡Listo! Revisa la ventana que se abrió y envía el mensaje.
-          </p>
+          <div class="field">
+            <label for="mensaje">Cuéntanos tu idea</label>
+            <textarea id="mensaje" name="mensaje" required placeholder="Título, estilo (Midnight, Forest…), cantidad, fecha deseada…"></textarea>
+          </div>
+          <div class="form-actions">
+            <button class="btn btn-burgundy" type="submit" data-send="email">Enviar por correo</button>
+            <button class="btn btn-ghost" type="button" data-send="whatsapp">Enviar por WhatsApp</button>
+          </div>
+          <p class="form-note">Se abrirá tu correo o WhatsApp con el mensaje listo. Solo tienes que enviarlo.</p>
+          <p class="form-success" id="form-success" role="status">¡Listo! Revisa la ventana que se abrió y envía el mensaje.</p>
         </form>
       </div>
     </section>
   </main>
 
-  <footer class="site-footer">
-    <div class="container footer-grid">
-      <div>
-        <img class="logo-footer" src="assets/icons/logo.svg" alt="Casa DALO" width="120" height="100" />
-        <h3>Casa DALO</h3>
-        <p>Del Amor y Otras Lecturas. Donde las historias cobran una forma inolvidable.</p>
+  <footer class="site-footer" id="contacto">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a class="logo" href="#inicio">
+            <img class="logo-mark" src="assets/icons/logo.svg" alt="" width="40" height="40" />
+            <span class="logo-text">
+              <strong>Casa DALO</strong>
+              <span>Del Amor y Otras Lecturas</span>
+            </span>
+          </a>
+          <p>Donde las historias cobran una forma inolvidable.</p>
+        </div>
+        <div class="footer-col">
+          <h4>Navegación</h4>
+          <a href="#inicio">Inicio</a>
+          <a href="#colecciones">Colecciones</a>
+          <a href="#disena">Diseña tu libro</a>
+          <a href="#autores">Para autores</a>
+          <a href="#cotizacion">Cotización</a>
+        </div>
+        <div class="footer-col">
+          <h4>Contacto</h4>
+          <a href="mailto:paorobgalan@gmail.com">paorobgalan@gmail.com</a>
+          <a href="https://wa.me/56965609346" target="_blank" rel="noopener noreferrer">WhatsApp +56 9 6560 9346</a>
+          <a href="mailto:paorobgalan@gmail.com">Envíos a todo Chile</a>
+        </div>
+        <div class="footer-col">
+          <h4>Síguenos</h4>
+          <div class="socials">
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="4"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg>
+            </a>
+            <a href="https://tiktok.com" target="_blank" rel="noopener noreferrer" aria-label="TikTok">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 4c.6 2.2 2.1 3.8 4.5 4.2v2.3c-1.5-.1-2.9-.6-4.1-1.5v5.7c0 3.3-2.6 5.8-5.9 5.8S2.6 17.9 2.6 14.6 5.2 8.8 8.5 8.8c.3 0 .6 0 .9.1v2.5c-.3-.1-.6-.2-.9-.2-1.9 0-3.4 1.6-3.4 3.4s1.5 3.4 3.4 3.4 3.4-1.5 3.4-3.4V4H14z"/></svg>
+            </a>
+            <a href="mailto:paorobgalan@gmail.com" aria-label="Email">
+              <img src="assets/icons/envelope.svg" alt="" width="16" height="16" />
+            </a>
+          </div>
+          <form class="newsletter" id="newsletter-form">
+            <label class="sr-only" for="newsletter-email">Tu email</label>
+            <input id="newsletter-email" type="email" placeholder="Tu email" required />
+            <button type="submit" aria-label="Suscribirse">→</button>
+          </form>
+        </div>
       </div>
-      <div>
-        <h3>Navegación</h3>
-        <a href="#inicio">Inicio</a>
-        <a href="#colecciones">Colecciones</a>
-        <a href="#disena">Diseña tu libro</a>
-        <a href="#contacto">Pedido</a>
-      </div>
-      <div>
-        <h3>Contacto</h3>
-        <a href="mailto:paorobgalan@gmail.com">paorobgalan@gmail.com</a>
-        <a href="https://wa.me/56965609346" target="_blank" rel="noopener noreferrer">WhatsApp +56 9 6560 9346</a>
-      </div>
-      <div>
-        <h3>Chile</h3>
-        <p>Envíos a todo el país. Ediciones hechas a mano con amor.</p>
-        <p style="margin-top: 1rem; opacity: 0.7; font-size: 0.9rem;">© <span id="year"></span> Casa DALO</p>
-      </div>
+      <p class="footer-bottom">© <span id="year"></span> Casa DALO — Del Amor y Otras Lecturas. Todos los derechos reservados.</p>
     </div>
   </footer>
 

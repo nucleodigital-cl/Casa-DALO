@@ -18,8 +18,6 @@ Artefactos literarios hechos a mano en Chile.
 - Correo: `paorobgalan@gmail.com`
 - WhatsApp: `+56 9 6560 9346`
 
-Si cambias de número o correo, edita `js/main.js` arriba del todo.
-
 ---
 
 ## Publicar en GitHub Pages
@@ -29,13 +27,3 @@ Si cambias de número o correo, edita `js/main.js` arriba del todo.
 3. Source: branch **main**, carpeta **/ (root)**.
 4. Guarda y espera 1–2 minutos.
 5. Abre: `https://nucleodigital-cl.github.io/Casa-DALO/`
-
----
-
-## Fotos reales (después)
-
-Cuando tengas fotos, crea una carpeta `img/` y agrega por ejemplo:
-- `img/hero.jpg` (foto grande del inicio)
-- logos e imágenes de galería
-
-Luego avísame y las conectamos en la web.
