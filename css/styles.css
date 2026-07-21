@@ -985,7 +985,10 @@ ul {
   padding: var(--space-xl) 0;
   isolation: isolate;
   overflow: hidden;
-  background: #2a211d;
+  background: #1a1512;
+  min-height: 70vh;
+  display: grid;
+  align-items: center;
 }
 
 .quote-media {
@@ -999,6 +1002,7 @@ ul {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  filter: saturate(1.05) contrast(1.05);
 }
 
 .quote::before {
@@ -1007,33 +1011,35 @@ ul {
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(
-      180deg,
-      rgba(42, 33, 29, 0.35) 0%,
-      rgba(42, 33, 29, 0.45) 50%,
-      rgba(42, 33, 29, 0.55) 100%
-    );
+    radial-gradient(ellipse at 50% 40%, rgba(26, 21, 18, 0.25), rgba(26, 21, 18, 0.55) 70%),
+    linear-gradient(180deg, rgba(26, 21, 18, 0.2), rgba(26, 21, 18, 0.45));
   pointer-events: none;
 }
 
 .quote-panel {
   max-width: 680px;
   margin: 0 auto;
-  padding: 2rem 1.75rem 2.25rem;
-  background: rgba(250, 246, 239, 0.94);
-  border: 1px solid rgba(183, 140, 66, 0.35);
-  box-shadow: 0 24px 50px rgba(0, 0, 0, 0.28);
+  padding: 1.5rem 0.5rem 0.5rem;
+  background: transparent;
+  border: none;
+  box-shadow: none;
 }
 
 .quote .section-title {
-  color: var(--forest);
+  color: var(--cream);
+  text-shadow: 0 2px 18px rgba(0, 0, 0, 0.45);
+}
+
+.quote .section-ornament {
+  color: var(--gold);
 }
 
 .quote-intro {
   text-align: center;
   max-width: 36rem;
   margin: -1rem auto 2rem;
-  color: var(--taupe);
+  color: rgba(245, 237, 226, 0.9);
+  text-shadow: 0 1px 12px rgba(0, 0, 0, 0.4);
 }
 
 .quote-form {
@@ -1041,6 +1047,70 @@ ul {
   margin: 0 auto;
   display: grid;
   gap: 1.15rem;
+}
+
+.quote .field label {
+  color: var(--gold-light);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
+}
+
+.quote .field input,
+.quote .field select,
+.quote .field textarea {
+  background: rgba(250, 246, 239, 0.18);
+  border: 1px solid rgba(183, 140, 66, 0.55);
+  color: var(--cream);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.04);
+}
+
+.quote .field input::placeholder,
+.quote .field textarea::placeholder {
+  color: rgba(245, 237, 226, 0.55);
+}
+
+.quote .field input:focus,
+.quote .field select:focus,
+.quote .field textarea:focus {
+  border-color: var(--gold);
+  background: rgba(250, 246, 239, 0.28);
+  outline: none;
+}
+
+.quote .field select {
+  color: var(--cream);
+}
+
+.quote .field select option {
+  color: var(--ink);
+  background: var(--cream);
+}
+
+.quote .form-note {
+  color: rgba(245, 237, 226, 0.75);
+  text-shadow: 0 1px 8px rgba(0, 0, 0, 0.35);
+}
+
+.quote .form-success {
+  color: var(--gold-light);
+  background: rgba(30, 47, 40, 0.35);
+  border: 1px solid rgba(183, 140, 66, 0.35);
+}
+
+.quote .btn-ghost {
+  color: var(--cream);
+  border-color: rgba(245, 237, 226, 0.65);
+}
+
+.quote .btn-ghost:hover {
+  background: rgba(245, 237, 226, 0.12);
+  color: var(--gold-light);
+  border-color: var(--gold);
+}
+
+.quote .btn-burgundy {
+  box-shadow: 0 10px 28px rgba(0, 0, 0, 0.28);
 }
 
 .form-row {
