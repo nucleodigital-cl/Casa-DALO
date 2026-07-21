@@ -320,44 +320,49 @@
     </section>
 
     <section class="quote" id="cotizacion" aria-labelledby="cotizacion-title">
+      <div class="quote-media" aria-hidden="true">
+        <img src="assets/images/formulario-fondo.jpg" alt="" width="1024" height="571" />
+      </div>
       <div class="container">
-        <h2 class="section-title reveal" id="cotizacion-title">Pide tu cotización</h2>
-        <div class="section-ornament reveal" aria-hidden="true"><span>✦</span></div>
-        <p class="quote-intro reveal">Cuéntanos qué edición sueñas. Te respondemos con opciones, tiempos y un presupuesto a tu medida.</p>
+        <div class="quote-panel reveal">
+          <h2 class="section-title" id="cotizacion-title">Pide tu cotización</h2>
+          <div class="section-ornament" aria-hidden="true"><span>✦</span></div>
+          <p class="quote-intro">Cuéntanos qué edición sueñas. Te respondemos con opciones, tiempos y un presupuesto a tu medida.</p>
 
-        <form class="quote-form reveal" id="quote-form" novalidate>
-          <div class="form-row">
-            <div class="field">
-              <label for="nombre">Nombre</label>
-              <input id="nombre" name="nombre" type="text" autocomplete="name" required placeholder="Tu nombre" />
+          <form class="quote-form" id="quote-form" novalidate>
+            <div class="form-row">
+              <div class="field">
+                <label for="nombre">Nombre</label>
+                <input id="nombre" name="nombre" type="text" autocomplete="name" required placeholder="Tu nombre" />
+              </div>
+              <div class="field">
+                <label for="contacto">Email o WhatsApp</label>
+                <input id="contacto" name="contacto" type="text" autocomplete="email" required placeholder="correo o +56…" />
+              </div>
             </div>
             <div class="field">
-              <label for="contacto">Email o WhatsApp</label>
-              <input id="contacto" name="contacto" type="text" autocomplete="email" required placeholder="correo o +56…" />
+              <label for="tipo">Tipo de proyecto</label>
+              <select id="tipo" name="tipo" required>
+                <option value="">Elige una opción</option>
+                <option value="Edición especial / colección">Edición especial / colección</option>
+                <option value="Libro personalizado (regalo)">Libro personalizado (regalo)</option>
+                <option value="Para autores (mi manuscrito)">Para autores (mi manuscrito)</option>
+                <option value="Kit de lectura">Kit de lectura</option>
+                <option value="Otro">Otro</option>
+              </select>
             </div>
-          </div>
-          <div class="field">
-            <label for="tipo">Tipo de proyecto</label>
-            <select id="tipo" name="tipo" required>
-              <option value="">Elige una opción</option>
-              <option value="Edición especial / colección">Edición especial / colección</option>
-              <option value="Libro personalizado (regalo)">Libro personalizado (regalo)</option>
-              <option value="Para autores (mi manuscrito)">Para autores (mi manuscrito)</option>
-              <option value="Kit de lectura">Kit de lectura</option>
-              <option value="Otro">Otro</option>
-            </select>
-          </div>
-          <div class="field">
-            <label for="mensaje">Cuéntanos tu idea</label>
-            <textarea id="mensaje" name="mensaje" required placeholder="Título, estilo (Midnight, Forest…), cantidad, fecha deseada…"></textarea>
-          </div>
-          <div class="form-actions">
-            <button class="btn btn-burgundy" type="submit" data-send="email">Enviar por correo</button>
-            <button class="btn btn-ghost" type="button" data-send="whatsapp">Enviar por WhatsApp</button>
-          </div>
-          <p class="form-note">Se abrirá tu correo o WhatsApp con el mensaje listo. Solo tienes que enviarlo.</p>
-          <p class="form-success" id="form-success" role="status">¡Listo! Revisa la ventana que se abrió y envía el mensaje.</p>
-        </form>
+            <div class="field">
+              <label for="mensaje">Cuéntanos tu idea</label>
+              <textarea id="mensaje" name="mensaje" required placeholder="Título, estilo (Midnight, Forest…), cantidad, fecha deseada…"></textarea>
+            </div>
+            <div class="form-actions">
+              <button class="btn btn-burgundy" type="submit" data-send="email">Enviar por correo</button>
+              <button class="btn btn-ghost" type="button" data-send="whatsapp">Enviar por WhatsApp</button>
+            </div>
+            <p class="form-note">Se abrirá tu correo o WhatsApp con el mensaje listo. Solo tienes que enviarlo.</p>
+            <p class="form-success" id="form-success" role="status">¡Listo! Revisa la ventana que se abrió y envía el mensaje.</p>
+          </form>
+        </div>
       </div>
     </section>
   </main>
