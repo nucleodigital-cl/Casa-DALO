@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 96 96" role="img" aria-hidden="true">
+  <defs>
+    <radialGradient id="pp-bg" cx="50%" cy="45%" r="55%">
+      <stop offset="0%" stop-color="#FFFDF9"/>
+      <stop offset="100%" stop-color="#EFE4D3"/>
+    </radialGradient>
+  </defs>
+  <circle cx="48" cy="48" r="46" fill="url(#pp-bg)"/>
+  <circle cx="48" cy="48" r="44.5" fill="none" stroke="#B78C42" stroke-width="1" opacity="0.55"/>
+  <path d="M16 26 Q22 20 26 28 M70 26 Q76 20 80 28" stroke="#B78C42" stroke-width="1" fill="none" opacity="0.65"/>
+  <!-- screw top -->
+  <circle cx="48" cy="18" r="3" fill="#B78C42"/>
+  <path d="M48 21 V30" stroke="#5B1E2D" stroke-width="1.6" stroke-linecap="round"/>
+  <!-- press plates -->
+  <rect x="24" y="30" width="48" height="6" rx="1" fill="#F5EDE2" stroke="#5B1E2D" stroke-width="1.3"/>
+  <rect x="28" y="38" width="40" height="8" rx="1" fill="#FFFDF9" stroke="#5B1E2D" stroke-width="1.2"/>
+  <path d="M32 41 H64" stroke="#B78C42" stroke-width="0.9" opacity="0.7"/>
+  <rect x="30" y="48" width="36" height="7" rx="1" fill="#F5EDE2" stroke="#5B1E2D" stroke-width="1.2"/>
+  <rect x="24" y="57" width="48" height="6" rx="1" fill="#FFFDF9" stroke="#5B1E2D" stroke-width="1.3"/>
+  <!-- wooden posts -->
+  <path d="M26 30 V63 M70 30 V63" stroke="#B78C42" stroke-width="1.5" stroke-linecap="round"/>
+  <!-- base -->
+  <path d="M20 66 H76" stroke="#5B1E2D" stroke-width="1.5" stroke-linecap="round"/>
+  <path d="M24 70 H72" stroke="#B78C42" stroke-width="1" opacity="0.6"/>
+  <path d="M14 74 Q24 80 36 76" stroke="#5B1E2D" stroke-width="0.85" fill="none" opacity="0.4"/>
+  <path d="M76 36 L77.2 39 L80.5 40 L77.2 41 L76 44 L74.8 41 L71.5 40 L74.8 39 Z" fill="#B78C42"/>
+</svg>

@@ -234,23 +234,28 @@ ul {
 .logo-oficial {
   display: block;
   height: auto;
+  background: transparent;
 }
 
 .logo-oficial--nav {
-  width: 3.4rem;
-  border-radius: 4px;
+  width: 3.15rem;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.25));
 }
 
 .logo-oficial--hero {
-  width: min(360px, 100%);
+  width: min(380px, 100%);
   margin: 0 auto;
   filter: drop-shadow(0 18px 35px rgba(42, 33, 29, 0.18));
 }
 
 .logo-oficial--footer {
-  width: 7.5rem;
-  border-radius: 4px;
+  width: 11rem;
   margin-bottom: 0.75rem;
+  padding: 0.55rem 0.45rem 0.35rem;
+  background: linear-gradient(160deg, rgba(255, 253, 249, 0.96), rgba(239, 228, 211, 0.92));
+  border: 1px solid rgba(183, 140, 66, 0.4);
+  border-radius: 2px;
+  filter: drop-shadow(0 4px 12px rgba(0, 0, 0, 0.2));
 }
 
 .nav-toggle {
@@ -699,26 +704,32 @@ ul {
 }
 
 .design-step-icon {
-  width: 4.25rem;
-  height: 4.25rem;
+  width: 4.5rem;
+  height: 4.5rem;
   margin: 0 auto 0.65rem;
-  border: 1px solid rgba(183, 140, 66, 0.45);
+  border: 1px solid rgba(183, 140, 66, 0.5);
   border-radius: 50%;
-  background: var(--white-soft);
+  background:
+    radial-gradient(circle at 40% 35%, #fffdf9, #efe4d3 72%);
   display: grid;
   place-items: center;
-  box-shadow: 0 8px 18px rgba(30, 47, 40, 0.06);
-  transition: transform 0.35s var(--ease), border-color 0.35s;
+  box-shadow:
+    0 0 0 3px rgba(245, 237, 226, 0.7),
+    0 8px 18px rgba(30, 47, 40, 0.08);
+  transition: transform 0.35s var(--ease), border-color 0.35s, box-shadow 0.35s;
 }
 
 .design-step:hover .design-step-icon {
   transform: translateY(-3px);
   border-color: var(--gold);
+  box-shadow:
+    0 0 0 3px rgba(245, 237, 226, 0.85),
+    0 12px 24px rgba(91, 30, 45, 0.12);
 }
 
 .design-step-icon img {
-  width: 2.35rem;
-  height: 2.35rem;
+  width: 2.45rem;
+  height: 2.45rem;
 }
 
 .design-step span {
@@ -824,13 +835,14 @@ ul {
 .design-fairytale-frame {
   position: relative;
   z-index: 1;
-  padding: 0.85rem;
+  padding: 0.95rem;
   background:
-    linear-gradient(145deg, rgba(250, 246, 239, 0.95), rgba(241, 231, 214, 0.9));
-  border: 1px solid rgba(183, 140, 66, 0.55);
+    linear-gradient(145deg, rgba(250, 246, 239, 0.98), rgba(241, 231, 214, 0.92));
+  border: 1.5px solid rgba(183, 140, 66, 0.65);
   box-shadow:
-    0 0 0 6px rgba(245, 237, 226, 0.65),
-    0 0 0 7px rgba(183, 140, 66, 0.35),
+    0 0 0 5px rgba(245, 237, 226, 0.75),
+    0 0 0 6px rgba(91, 30, 45, 0.22),
+    0 0 0 8px rgba(183, 140, 66, 0.35),
     0 28px 55px rgba(30, 47, 40, 0.22);
   overflow: hidden;
 }
@@ -838,10 +850,25 @@ ul {
 .design-fairytale-frame::before {
   content: "";
   position: absolute;
-  inset: 0.45rem;
-  border: 1px solid rgba(91, 30, 45, 0.25);
+  inset: 0.5rem;
+  border: 1px solid rgba(91, 30, 45, 0.28);
   pointer-events: none;
   z-index: 2;
+}
+
+.design-fairytale-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0.7rem;
+  border: 1px solid rgba(183, 140, 66, 0.28);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.design-fairytale-frame .fairytale-frame-inner {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
 }
 
 .design-fairytale-frame img {
@@ -864,19 +891,21 @@ ul {
   );
 }
 
-.design-fairytale-frame .corner {
+.design-fairytale-frame .corner,
+.fairytale-frame .corner {
   position: absolute;
   z-index: 3;
   color: var(--gold);
-  font-size: 0.75rem;
+  font-size: 0.8rem;
   line-height: 1;
   text-shadow: 0 0 8px rgba(245, 237, 226, 0.8);
+  pointer-events: none;
 }
 
-.corner-tl { top: 0.55rem; left: 0.6rem; }
-.corner-tr { top: 0.55rem; right: 0.6rem; }
-.corner-bl { bottom: 0.55rem; left: 0.6rem; }
-.corner-br { bottom: 0.55rem; right: 0.6rem; }
+.corner-tl { top: 0.45rem; left: 0.5rem; }
+.corner-tr { top: 0.45rem; right: 0.5rem; }
+.corner-bl { bottom: 0.45rem; left: 0.5rem; }
+.corner-br { bottom: 0.45rem; right: 0.5rem; }
 
 .design-fairytale figcaption {
   position: relative;
@@ -914,10 +943,43 @@ ul {
 }
 
 .process-photo {
+  position: relative;
   margin: 0;
-  border: 1px solid rgba(183, 140, 66, 0.3);
+  padding: 0.85rem;
+  background:
+    linear-gradient(145deg, rgba(250, 246, 239, 0.98), rgba(241, 231, 214, 0.92));
+  border: 1.5px solid rgba(183, 140, 66, 0.65);
+  box-shadow:
+    0 0 0 5px rgba(245, 237, 226, 0.7),
+    0 0 0 6px rgba(91, 30, 45, 0.2),
+    0 0 0 8px rgba(183, 140, 66, 0.32),
+    0 18px 40px rgba(30, 47, 40, 0.14);
+  max-height: none;
   overflow: hidden;
-  box-shadow: 0 18px 40px rgba(30, 47, 40, 0.12);
+}
+
+.process-photo::before {
+  content: "";
+  position: absolute;
+  inset: 0.45rem;
+  border: 1px solid rgba(91, 30, 45, 0.28);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.process-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0.65rem;
+  border: 1px solid rgba(183, 140, 66, 0.28);
+  pointer-events: none;
+  z-index: 2;
+}
+
+.process-photo .fairytale-frame-inner {
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
   max-height: 560px;
 }
 
@@ -927,6 +989,7 @@ ul {
   max-height: 560px;
   object-fit: cover;
   object-position: center top;
+  display: block;
 }
 
 .process-grid {
@@ -952,19 +1015,30 @@ ul {
   font-size: 0.75rem;
   letter-spacing: 0.15em;
   color: var(--gold);
-  margin-bottom: 0.75rem;
+  margin-bottom: 0.55rem;
 }
 
 .process-illus {
-  width: 4.5rem;
-  height: 4.5rem;
-  margin: 0 auto 0.85rem;
-  border: 1px solid rgba(183, 140, 66, 0.45);
-  border-radius: 50%;
+  width: 5.35rem;
+  height: 5.35rem;
+  margin: 0 auto 0.75rem;
+  border: none;
+  border-radius: 0;
   display: grid;
   place-items: center;
-  color: var(--forest);
-  background: var(--cream);
+  background: transparent;
+  box-shadow: none;
+  transition: transform 0.35s var(--ease);
+}
+
+.process-item:hover .process-illus {
+  transform: translateY(-4px) scale(1.03);
+}
+
+.process-illus img {
+  width: 100%;
+  height: 100%;
+  filter: drop-shadow(0 8px 14px rgba(30, 47, 40, 0.12));
 }
 
 .process-illus svg {
@@ -1348,7 +1422,7 @@ ul {
   }
 
   .logo-oficial--hero {
-    width: min(320px, 78vw);
+    width: min(340px, 78vw);
   }
 }
 
@@ -1384,7 +1458,7 @@ ul {
   }
 
   .logo-oficial--nav {
-    width: 2.85rem;
+    width: 2.75rem;
   }
 
   .collections-track {
@@ -1437,7 +1511,7 @@ ul {
   }
 
   .logo-oficial--hero {
-    width: min(280px, 82vw);
+    width: min(300px, 86vw);
   }
 }
 
