@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" aria-label="CASA DALO" role="img">
-  <circle cx="100" cy="100" r="94" fill="none" stroke="#5B1E2D" stroke-width="4"/>
+  <circle cx="100" cy="100" r="94" fill="none" stroke="#D8BB82" stroke-width="4"/>
   <g stroke="#B78C42" stroke-width="2" fill="none">
     <path d="M65 115 Q100 125 135 115"/>
     <path d="M65 115 Q78 140 100 145 Q122 140 135 115"/>
@@ -9,5 +9,5 @@
     <circle cx="100" cy="100" r="2" fill="#B78C42"/>
   </g>
   <path d="M115 78 A10 10 0 1 1 105 68 A8 8 0 1 0 115 78 Z" fill="#B78C42"/>
-  <text x="100" y="173" font-family="Cormorant Garamond, 'Times New Roman', serif" font-size="18" letter-spacing="4" text-anchor="middle" fill="#5B1E2D">CASA DALO</text>
+  <text x="100" y="173" font-family="Cormorant Garamond, 'Times New Roman', serif" font-size="18" letter-spacing="4" text-anchor="middle" fill="#F1E7D6">CASA DALO</text>
 </svg>
