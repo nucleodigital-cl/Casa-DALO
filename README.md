@@ -1,7 +1,7 @@
 # Casa DALO
 
 **Casa DALO** = **Del Amor y Otras Lecturas**  
-Artefactos literarios hechos a mano en Chile.
+Sueños literarios hechos a mano en Chile.
 
 ---
 
