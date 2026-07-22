@@ -1552,3 +1552,246 @@ ul {
     transform: none;
   }
 }
+
+
+/* =============================================
+   HERO FANTASY — OVERRIDE ATMOSFERA
+   Verde bosque profundo + dorado + morado magico
+============================================= */
+
+.hero {
+  background:
+    linear-gradient(
+      135deg,
+      #0a1a0f 0%,
+      #0d1f1a 25%,
+      #111828 55%,
+      #1a0e2e 80%,
+      #0f1a0a 100%
+    );
+  isolation: isolate;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Reemplaza el overlay crema por uno oscuro con particulas doradas */
+.hero::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background:
+    radial-gradient(ellipse 80% 60% at 30% 40%, rgba(183,120,66,0.18) 0%, transparent 65%),
+    radial-gradient(ellipse 60% 80% at 75% 60%, rgba(74,40,120,0.22) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 40% at 10% 80%, rgba(30,80,50,0.35) 0%, transparent 60%),
+    radial-gradient(ellipse 40% 50% at 90% 20%, rgba(201,168,76,0.12) 0%, transparent 55%);
+  pointer-events: none;
+}
+
+/* Textura de pergamino animada con puntos de luz */
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  background-image:
+    radial-gradient(1px 1px at 20% 30%, rgba(201,168,76,0.6) 0%, transparent 100%),
+    radial-gradient(1px 1px at 80% 15%, rgba(201,168,76,0.4) 0%, transparent 100%),
+    radial-gradient(1.5px 1.5px at 50% 70%, rgba(201,168,76,0.5) 0%, transparent 100%),
+    radial-gradient(1px 1px at 70% 45%, rgba(255,255,255,0.3) 0%, transparent 100%),
+    radial-gradient(1px 1px at 35% 85%, rgba(201,168,76,0.35) 0%, transparent 100%),
+    radial-gradient(1px 1px at 90% 75%, rgba(255,255,255,0.2) 0%, transparent 100%),
+    radial-gradient(1px 1px at 15% 55%, rgba(201,168,76,0.45) 0%, transparent 100%),
+    radial-gradient(2px 2px at 60% 25%, rgba(201,168,76,0.3) 0%, transparent 100%);
+  animation: starsFloat 8s ease-in-out infinite alternate;
+  pointer-events: none;
+}
+
+@keyframes starsFloat {
+  0%   { opacity: 0.5; transform: translateY(0px); }
+  100% { opacity: 1;   transform: translateY(-8px); }
+}
+
+/* La imagen hero existente pasa a ser un elemento de profundidad */
+.hero-image-wrapper,
+.hero__image,
+.hero-image {
+  opacity: 0.18;
+  mix-blend-mode: luminosity;
+  filter: saturate(0.4) brightness(0.6);
+}
+
+/* Textos del hero: sobre fondo oscuro quedan luminosos */
+.hero-copy,
+.hero__content,
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-copy .hero-title,
+.hero-copy h1,
+.hero__title,
+.hero-title {
+  color: #f5f0e8;
+  text-shadow:
+    0 0 60px rgba(201,168,76,0.25),
+    0 2px 40px rgba(0,0,0,0.8);
+}
+
+.hero-copy .hero-title em,
+.hero__title em,
+.hero-title em {
+  color: #c9a84c;
+  font-style: italic;
+}
+
+.hero-copy .hero-subtitle,
+.hero-copy p,
+.hero__subtitle,
+.hero-subtitle {
+  color: rgba(245,240,232,0.8);
+  text-shadow: 0 1px 20px rgba(0,0,0,0.9);
+}
+
+.hero-brand svg,
+.hero-brand img,
+.hero-logo {
+  filter: brightness(1.2);
+}
+
+/* Boton dorado sobre fondo oscuro */
+.hero .btn-primary,
+.hero .cta-btn,
+.hero [class*="btn"] {
+  background: #c9a84c;
+  color: #0a1a0f;
+  border-color: #c9a84c;
+  font-weight: 600;
+  box-shadow: 0 4px 30px rgba(201,168,76,0.3);
+}
+
+.hero .btn-primary:hover,
+.hero .cta-btn:hover,
+.hero [class*="btn"]:hover {
+  background: #e8c96a;
+  box-shadow: 0 6px 40px rgba(201,168,76,0.5);
+  transform: translateY(-2px);
+}
+
+/* Borde luminoso debajo del hero */
+.hero + * {
+  border-top: 1px solid rgba(201,168,76,0.15);
+}
+
+/* Separador dorado elegante en el hero */
+.hero-divider,
+.hero .divider {
+  border-color: rgba(201,168,76,0.4);
+}
+
+/* Topbar sobre el hero: transparente con acento dorado */
+.topbar {
+  background: rgba(10,26,15,0.95);
+  color: rgba(201,168,76,0.9);
+  border-bottom: 1px solid rgba(201,168,76,0.2);
+  letter-spacing: 0.12em;
+}
+
+/* Header sobre hero oscuro */
+.site-header {
+  background: transparent;
+}
+.site-header.scrolled,
+.site-header.sticky {
+  background: rgba(10,26,15,0.96);
+  backdrop-filter: blur(16px);
+  box-shadow: 0 2px 30px rgba(0,0,0,0.5);
+  border-bottom: 1px solid rgba(201,168,76,0.15);
+}
+
+
+/* === HERO MEDIA: oscurecer la imagen de fondo === */
+.hero-media {
+  position: absolute !important;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+}
+.hero-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 0.12 !important;
+  mix-blend-mode: luminosity;
+  filter: saturate(0.2) brightness(0.5) sepia(0.3);
+  transform: scale(1.05);
+}
+
+/* === HERO GRID: contenido sobre el fondo oscuro === */
+.hero-grid {
+  position: relative;
+  z-index: 2;
+}
+.hero-copy {
+  position: relative;
+  z-index: 2;
+}
+
+/* === TEXTOS DEL HERO: luminosos sobre fondo oscuro === */
+.hero-title {
+  color: #f5f0e8 !important;
+  text-shadow:
+    0 0 80px rgba(201,168,76,0.3),
+    0 2px 40px rgba(0,0,0,0.9) !important;
+}
+.hero-title-main {
+  color: #f5f0e8 !important;
+}
+.hero-title-script {
+  color: #c9a84c !important;
+}
+.hero-sub,
+.hero-subtitle {
+  color: rgba(245,240,232,0.75) !important;
+  text-shadow: 0 1px 20px rgba(0,0,0,0.95) !important;
+}
+
+/* === DIVIDER DEL HERO: dorado === */
+.hero-divider span {
+  background: rgba(201,168,76,0.5) !important;
+}
+.hero-divider i {
+  color: #c9a84c !important;
+}
+
+/* === BOTON CTA DEL HERO: dorado luminoso === */
+.hero .btn,
+.hero .btn-primary,
+.hero a[class*="btn"] {
+  background: #c9a84c !important;
+  color: #0a1a0f !important;
+  border-color: #c9a84c !important;
+  box-shadow: 0 4px 30px rgba(201,168,76,0.35) !important;
+  font-weight: 600;
+}
+.hero .btn:hover,
+.hero .btn-primary:hover {
+  background: #e8c96a !important;
+  box-shadow: 0 6px 40px rgba(201,168,76,0.55) !important;
+  transform: translateY(-2px);
+}
+
+/* === LOGO OFICIAL NAV: brilla sobre fondo oscuro === */
+.logo-oficial--nav {
+  filter: brightness(1.3);
+}
+
+/* === NAV LINKS: claros sobre header transparente === */
+.site-header:not(.scrolled) .nav a {
+  color: rgba(245,240,232,0.85);
+}
+.site-header:not(.scrolled) .nav a:hover {
+  color: #c9a84c;
+}
